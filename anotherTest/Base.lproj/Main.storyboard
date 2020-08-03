@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="anotherTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba1-gd-XvW">
+                                <rect key="frame" x="58" y="113" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="OJ4-c0-DhP"/>
+                                    <constraint firstAttribute="height" constant="30" id="kjP-yd-S6i"/>
+                                </constraints>
+                                <state key="normal" title="录音"/>
+                                <connections>
+                                    <action selector="recordOnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yuk-06-wSW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dM9-TH-ut7">
+                                <rect key="frame" x="274" y="113" width="79" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="58K-iW-QsO"/>
+                                    <constraint firstAttribute="height" constant="30" id="GgQ-Qx-yVd"/>
+                                </constraints>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="playOnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3nG-6v-ZZQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="截取片段如下：" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LF-4Q-naI">
+                                <rect key="frame" x="58" y="181" width="295" height="285"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="285" id="Mjb-TJ-HrO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="295" id="NwT-NB-dp0"/>
+                                    <constraint firstAttribute="width" constant="295" id="QqQ-5A-Qem"/>
+                                    <constraint firstAttribute="height" constant="285" id="bnf-F4-i56"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQ8-iB-aNH">
+                                <rect key="frame" x="106" y="602" width="178" height="30"/>
+                                <state key="normal" title="截取3s的录音"/>
+                                <connections>
+                                    <action selector="truncateOnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DcL-Fa-mCD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-Ic-Dly">
+                                <rect key="frame" x="112" y="640" width="172" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Im0-a6-zUV"/>
+                                    <constraint firstAttribute="width" constant="172" id="awC-tj-tD6"/>
+                                </constraints>
+                                <state key="normal" title="播放截取片段"/>
+                                <connections>
+                                    <action selector="truncatePlayOnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n86-Ei-GFh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFw-Iy-8aK">
+                                <rect key="frame" x="68" y="759" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testOnTouch1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="abR-0S-K4O"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-uf-YLy">
+                                <rect key="frame" x="164" y="759" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testOnTouch2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0WW-Ws-EEt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eH-HV-mrw">
+                                <rect key="frame" x="259" y="759" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="testOnTouch3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LdD-tL-1WF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0LF-4Q-naI" firstAttribute="top" secondItem="ba1-gd-XvW" secondAttribute="bottom" constant="38" id="18I-XL-ad6"/>
+                            <constraint firstItem="ba1-gd-XvW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="6q4-Yq-Qpg"/>
+                            <constraint firstItem="mA2-Ic-Dly" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="7WH-Gx-0uF"/>
+                            <constraint firstItem="mA2-Ic-Dly" firstAttribute="top" secondItem="RQ8-iB-aNH" secondAttribute="bottom" constant="8" id="I5y-eX-w7v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mA2-Ic-Dly" secondAttribute="trailing" constant="118" id="KPJ-qh-19j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RQ8-iB-aNH" secondAttribute="bottom" constant="230" id="LLO-pK-dgp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RQ8-iB-aNH" secondAttribute="trailing" constant="118" id="LjK-Eq-9se"/>
+                            <constraint firstItem="0LF-4Q-naI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="MSc-Nt-qAz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0LF-4Q-naI" secondAttribute="trailing" constant="61" id="S4y-zj-wTf"/>
+                            <constraint firstItem="ba1-gd-XvW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="eFf-Jb-uQD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dM9-TH-ut7" secondAttribute="trailing" constant="61" id="kPI-uJ-gKB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mA2-Ic-Dly" secondAttribute="bottom" constant="178" id="pNS-EK-Ili"/>
+                            <constraint firstItem="RQ8-iB-aNH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="tZA-u0-opV"/>
+                            <constraint firstItem="dM9-TH-ut7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="vSc-31-TZ0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pathText" destination="0LF-4Q-naI" id="rld-so-p48"/>
+                        <outlet property="playButton" destination="dM9-TH-ut7" id="iUm-6N-A4m"/>
+                        <outlet property="recordButton" destination="ba1-gd-XvW" id="rIU-Rm-FRX"/>
+                        <outlet property="truncateButton" destination="RQ8-iB-aNH" id="ABr-Sp-k77"/>
+                        <outlet property="truncatePlayButton" destination="mA2-Ic-Dly" id="5gc-Kc-kvP"/>
+                        <outlet property="truncateResultButton1" destination="jFw-Iy-8aK" id="trQ-7C-ASZ"/>
+                        <outlet property="truncateResultButton2" destination="mdM-uf-YLy" id="xTl-K9-zAx"/>
+                        <outlet property="truncateResultButton3" destination="3eH-HV-mrw" id="ldU-OW-dFL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
